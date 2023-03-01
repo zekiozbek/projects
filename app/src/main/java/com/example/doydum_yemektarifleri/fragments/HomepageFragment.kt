@@ -21,7 +21,7 @@ import kotlinx.android.synthetic.main.fragment_homepage.*
 
 class HomepageFragment : Fragment() {
 
-    private lateinit var database:  FirebaseFirestore
+    private lateinit var database: FirebaseFirestore
     private lateinit var rvAdapter: HomepageAdapter
     private lateinit var postList: ArrayList<HomepageModel>
     private lateinit var binding: FragmentHomepageBinding
@@ -43,7 +43,8 @@ class HomepageFragment : Fragment() {
         getData()
 
         binding.rvHomepage.setHasFixedSize(true)
-        binding.rvHomepage.layoutManager=StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL)
+        binding.rvHomepage.layoutManager =
+            StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
 
         rvAdapter = HomepageAdapter(postList)
         binding.rvHomepage.adapter = rvAdapter
@@ -51,34 +52,28 @@ class HomepageFragment : Fragment() {
         return view
     }
 
-    fun getData() {
+    private fun getData() {
 
-        database.collection("Mutfaklar").addSnapshotListener { snapshot, error ->
+        database.collection("Mutfaklar").addSnapshotListener { snapshot, _ ->
 
-            if (snapshot!=null){
-                if (!snapshot.isEmpty){
+
+            snapshot?.let {
+                if (!snapshot.isEmpty) {
                     val documents = snapshot.documents
 
                     postList.clear()
 
-                    for (document in documents){
+                    documents.forEach {  document ->
                         val mutfak = document.get("mutfak") as String
                         val resim = document.get("resim") as String
 
-                        val indirilenPost = HomepageModel(mutfak,resim)
+                        val indirilenPost = HomepageModel(mutfak, resim)
                         postList.add(indirilenPost)
-
                     }
 
                     rvAdapter.notifyDataSetChanged()
                 }
             }
-
         }
-
-
-
-
-
     }
 }
