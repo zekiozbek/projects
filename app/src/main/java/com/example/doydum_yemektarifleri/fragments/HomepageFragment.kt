@@ -21,7 +21,7 @@ import kotlinx.android.synthetic.main.fragment_homepage.*
 
 class HomepageFragment : Fragment() {
 
-    private lateinit var database: FirebaseFirestore
+    private lateinit var database:  FirebaseFirestore
     private lateinit var rvAdapter: HomepageAdapter
     private lateinit var postList: ArrayList<HomepageModel>
     private lateinit var binding: FragmentHomepageBinding
