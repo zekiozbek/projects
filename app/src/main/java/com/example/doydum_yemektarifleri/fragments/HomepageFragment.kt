@@ -60,13 +60,10 @@ class HomepageFragment : Fragment() {
             snapshot?.let {
                 if (!snapshot.isEmpty) {
                     val documents = snapshot.documents
-
                     postList.clear()
-
                     documents.forEach {  document ->
                         val mutfak = document.get("mutfak") as String
                         val resim = document.get("resim") as String
-
                         val indirilenPost = HomepageModel(mutfak, resim)
                         postList.add(indirilenPost)
                     }
