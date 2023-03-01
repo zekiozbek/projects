@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "411339073023",
+    "project_id": "doydum-48a7c",
+    "storage_bucket": "doydum-48a7c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:411339073023:android:24a21136c37ca5d3fcb3ca",
+        "android_client_info": {
+          "package_name": "com.example.doydum_yemektarifleri"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "411339073023-4bljkrmfnmtfquf4pc16ojk7kan02o7o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9SMhZZIN43Q4AaBxR8Y9bVdOaDQASPpg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "411339073023-4bljkrmfnmtfquf4pc16ojk7kan02o7o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

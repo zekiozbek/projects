@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_baseline_search_24"
+        app:showAsAction="always|collapseActionView" />
+    <item
+        android:id="@+id/action_mutfaklar"
+        android:title="Mutfaklar"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_yoreler"
+        android:title="Yöreler"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_favoriler"
+        android:title="Favoriler"
+        app:showAsAction="never" />
+</menu>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homepageFragment">
+
+    <fragment
+        android:id="@+id/favsFragment"
+        android:name="com.example.doydum_yemektarifleri.fragments.FavsFragment"
+        android:label="fragment_favs"
+        tools:layout="@layout/fragment_favs" >
+        <action
+            android:id="@+id/action_favsFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeFragment"
+        android:name="com.example.doydum_yemektarifleri.fragments.RecipeFragment"
+        android:label="fragment_recipe"
+        tools:layout="@layout/fragment_recipe" />
+    <fragment
+        android:id="@+id/speciesFragment"
+        android:name="com.example.doydum_yemektarifleri.fragments.SpeciesFragment"
+        android:label="fragment_species"
+        tools:layout="@layout/fragment_species" >
+        <action
+            android:id="@+id/action_speciesFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/yorelerFragment"
+        android:name="com.example.doydum_yemektarifleri.fragments.YorelerFragment"
+        android:label="fragment_yoreler"
+        tools:layout="@layout/fragment_yoreler" >
+        <action
+            android:id="@+id/action_yorelerFragment_to_speciesFragment"
+            app:destination="@id/speciesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homepageFragment"
+        android:name="com.example.doydum_yemektarifleri.fragments.HomepageFragment"
+        android:label="fragment_homepage"
+        tools:layout="@layout/fragment_homepage" >
+        <action
+            android:id="@+id/action_homepageFragment_to_speciesFragment"
+            app:destination="@id/speciesFragment" />
+        <action
+            android:id="@+id/action_homepageFragment_to_yorelerFragment"
+            app:destination="@id/yorelerFragment" />
+    </fragment>
+</navigation>
