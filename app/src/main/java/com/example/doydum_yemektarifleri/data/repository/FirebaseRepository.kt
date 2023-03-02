@@ -18,13 +18,10 @@ class FirebaseRepository {
 
     suspend fun getKitchen(): Flow<List<KitchenDomain>> = flow {
         val data = fireStore.collection(Constants.KITCHEN_COLLECTION).get().await()
-        val list: MutableList<KitchenDomain> = mutableListOf()
-        data.documents.forEach { document ->
-            list.add(
-                KitchenDomain(
-                    mutfak = document.getString("mutfak"),
-                    resim = document.getString("resim")
-                )
+        val list: List<KitchenDomain> = data.documents.map { document ->
+            KitchenDomain(
+                mutfak = document.getString("mutfak"),
+                resim = document.getString("resim")
             )
         }
         emit(list)
