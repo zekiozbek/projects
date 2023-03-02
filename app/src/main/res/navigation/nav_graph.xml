@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/favsFragment"
-        android:name="com.example.doydum_yemektarifleri.fragments.FavsFragment"
+        android:name="com.example.doydum_yemektarifleri.ui.favs.FavsFragment"
         android:label="fragment_favs"
         tools:layout="@layout/fragment_favs" >
         <action
@@ -16,12 +16,12 @@
     </fragment>
     <fragment
         android:id="@+id/recipeFragment"
-        android:name="com.example.doydum_yemektarifleri.fragments.RecipeFragment"
+        android:name="com.example.doydum_yemektarifleri.ui.recipe.RecipeFragment"
         android:label="fragment_recipe"
         tools:layout="@layout/fragment_recipe" />
     <fragment
         android:id="@+id/speciesFragment"
-        android:name="com.example.doydum_yemektarifleri.fragments.SpeciesFragment"
+        android:name="com.example.doydum_yemektarifleri.ui.species.SpeciesFragment"
         android:label="fragment_species"
         tools:layout="@layout/fragment_species" >
         <action
@@ -30,7 +30,7 @@
     </fragment>
     <fragment
         android:id="@+id/yorelerFragment"
-        android:name="com.example.doydum_yemektarifleri.fragments.YorelerFragment"
+        android:name="com.example.doydum_yemektarifleri.ui.yoreler.YorelerFragment"
         android:label="fragment_yoreler"
         tools:layout="@layout/fragment_yoreler" >
         <action
@@ -39,7 +39,7 @@
     </fragment>
     <fragment
         android:id="@+id/homepageFragment"
-        android:name="com.example.doydum_yemektarifleri.fragments.HomepageFragment"
+        android:name="com.example.doydum_yemektarifleri.ui.home.HomepageFragment"
         android:label="fragment_homepage"
         tools:layout="@layout/fragment_homepage" >
         <action

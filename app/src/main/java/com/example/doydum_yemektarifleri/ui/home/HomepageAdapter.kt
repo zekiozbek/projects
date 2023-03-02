@@ -1,4 +1,4 @@
-package com.example.doydum_yemektarifleri.adapters
+package com.example.doydum_yemektarifleri.ui.home
 
 
 
@@ -12,10 +12,10 @@ import androidx.cardview.widget.CardView
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.doydum_yemektarifleri.R
-import com.example.doydum_yemektarifleri.models.HomepageModel
+import com.example.doydum_yemektarifleri.domain.model.KitchenDomain
 
 
-class HomepageAdapter(private val postList: ArrayList<HomepageModel>) :
+class HomepageAdapter(private val postList: ArrayList<KitchenDomain>) :
     RecyclerView.Adapter<HomepageAdapter.ViewHolder>() {
 
 
