@@ -9,6 +9,7 @@ import com.example.doydum_yemektarifleri.data.repository.FirebaseRepository
 import com.example.doydum_yemektarifleri.domain.model.KitchenDomain
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 
@@ -26,7 +27,7 @@ class HomeViewModel : ViewModel() {
         viewModelScope.launch {
             firebaseRepository.getKitchen().onEach {
                 _kitchenLiveData.value = it
-            }
+            }.launchIn(viewModelScope)
         }
     }
 
